@@ -3,6 +3,7 @@ from random import randint
 
 
 class Window:
+
     # Window Initialisation
     root = Tk()
     root.title("Number Guessing Game")
