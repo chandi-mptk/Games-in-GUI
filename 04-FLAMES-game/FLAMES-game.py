@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Tk, StringVar, LabelFrame, Label, Entry, Button
 from re import match
 from tkinter import messagebox
 
@@ -87,7 +87,7 @@ class FLAMES:
             if match("^[a-zA-Z .]*$", c):
 
                 # Convert to Set ro remove Duplicate Letters by keeping one
-                c_set = set([l.lower() for l in c])
+                c_set = set([letter.lower() for letter in c])
 
                 # Converted To List
                 self.names = list(c_set)
