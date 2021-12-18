@@ -10,6 +10,7 @@ class Window:
     width = 330
     height = 330
     root.geometry(f"{width}x{height}+100+100")
+    root.resizable(False, False)
 
     def __init__(self):
 

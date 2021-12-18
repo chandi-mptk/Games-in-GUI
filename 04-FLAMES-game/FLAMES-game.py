@@ -7,10 +7,11 @@ class Window:
 
     # Window Initialisation
     root = Tk()
-    root.title("Number Guessing Game")
+    root.title("Flames Calculator")
     width = 300
     height = 250
     root.geometry(f"{width}x{height}+100+100")
+    root.resizable(False, False)
 
     def __init__(self):
 

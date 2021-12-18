@@ -11,6 +11,7 @@ class HangMan:
     width = root.winfo_screenwidth()
     height = root.winfo_screenheight()
     root.geometry(f"{width // 2}x{height // 2}+100+100")
+    root.resizable(False, False)
 
     # Load Logo Imange
     logo_image = PhotoImage(file='./Hangman Art/logo.png')
