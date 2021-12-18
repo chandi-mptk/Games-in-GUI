@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Tk, IntVar, StringVar, LabelFrame, Label, Button
 from random import randint
 from tkinter import messagebox
 
@@ -121,7 +121,6 @@ class Window:
             self.rock_Button.config(state='normal')
             self.paper_Button.config(state='normal')
             self.scissor_Button.config(state='normal')
-            #self.game_state_var.set(value="Select Prediction")
 
     # Callback Function for Close Button
     def __callback(self):
