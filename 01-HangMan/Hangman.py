@@ -65,7 +65,7 @@ class HangMan:
 
         # Random Word Display as '_'
         self.random_word_Label = Label(self.random_word_Frame, text=self.display_word_var, font=('Arial', 25))
-        self.random_word_Label.grid(row=1, column=1)
+        self.random_word_Label.pack(pady=50)
 
         # Random Word Guess Entry
         self.guess_word_Label = Label(self.guess_word_Frame, text="Enter Your Guess", font=('Arial', 15))
@@ -81,7 +81,7 @@ class HangMan:
 
         # Image Showing
         self.photo_label = Label(self.image_Frame, image=self.logo_image)
-        self.photo_label.grid(row=0, column=0)
+        self.photo_label.pack(pady=40, fill='both')
 
         self.play_game()
 
@@ -129,8 +129,9 @@ class HangMan:
                     if "_" not in display_word_list:
 
                         # All Letters Guessed Ask to Play Again & Show Score
-                        play_again = messagebox.askyesno("Success", f"You Won The Game\n\
-Remaining Life {self.lives}\nDo you Want to Play Again?")
+                        play_again = messagebox.askyesno("Success", f"You Won The Game\n"
+                                                                    f"Remaining Life {self.lives}\n"
+                                                                    f"Do you Want to Play Again?")
                         if play_again:
                             self.play_game()
                         else:
@@ -149,11 +150,12 @@ Remaining Life {self.lives}\nDo you Want to Play Again?")
 
                         # Failed Show Last Hanging Image
                         self.photo_label.config(image=self.hangman_image[0])
+                        self.random_word_Label.config(text=self.chosen_word)
 
                         # Word Prediction Failed Ask to Play Again
                         play_again = messagebox.askyesno("Failed",
-                                                         f"You Word Guessing Failed and the Man Hanged\n\
-Do you want to Play again?")
+                                                         f"You Word Guessing Failed and the Man Hanged\n"
+                                                         f"Do you want to Play again?")
                         if play_again:
                             self.play_game()
                         else:
