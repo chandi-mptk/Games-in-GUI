@@ -2,6 +2,7 @@ from tkinter import Tk, Frame, Button, Label, messagebox
 
 
 class TicTacToe:
+
     # Window Initialisation
     root = Tk()
     root.title("Tic Tac Toe")
